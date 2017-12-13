@@ -107,3 +107,43 @@ class ReverseWords
 		System.out.println("Reversed Sentence is "+ new String(str));
 	}
 }
+
+
+
+/*
+Solutions
+
+https://stackoverflow.com/questions/2713655/reverse-a-given-sentence-in-java
+
+
+Approach 1:
+String[] words =  "This is interview question".split(" ");\
+
+String rev = "";
+for(int i = words.length - 1; i >= 0 ; i--)
+{
+   rev += words[i] + " ";
+}
+
+// rev = "question interview is This "
+
+
+Approach 1.2:
+// can also use StringBuilder:
+StringBuilder revb = new StringBuilder();
+for(int i = words.length - 1; i >= 0 ; i--)
+{
+   revb.append(words[i]);
+   revb.append(" ");
+}
+// revb.toString() = "question interview is This "
+
+Or Use:
+
+String[] words = sentence.split(" ");
+String[] reversedWords = ArrayUtils.reverse(words);
+String reversedSentence = StringUtils.join(reversedWords, " ");
+
+/*
+
+
